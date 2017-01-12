@@ -1,5 +1,5 @@
 public void setup()
-{
+{ 
   String lines[] = loadStrings("palindromes.txt");
   println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
@@ -22,7 +22,14 @@ public boolean palindrome(String word)
 public String reverse(String str)
 {
     String sNew = new String();
-    //your code here
+    int lastChar = str.length()-1;
+
+    for(int i = lastChar; i >=0; i--){
+      sNew = sNew + str.substring(i, i+1);
+      System.out.println(sNew);
+    }
+
+
     return sNew;
 }
 

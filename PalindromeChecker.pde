@@ -17,11 +17,12 @@ public void setup()
 public boolean palindrome(String word)
 {
   
-  noSpaces(word);
-  noCapitals(word);
-  onlyChars(word); 
+  String s = new String();
+  s = noSpaces(word);
+  s = onlyChars(word);
+  s = s.toLowerCase();
 
-  if(reverse(word).equals(word))
+  if(s.equals(reverse(s)) == true)
     return true;
   return false;
 }
@@ -46,11 +47,6 @@ public String noSpaces(String s)
       answer = answer + s.substring(i, i+1);
 
   return answer;
-}
-
-public String noCapitals(String c)
-{
-  return c.toLowerCase();
 }
 
 public String onlyChars(String line)
